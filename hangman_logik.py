@@ -1,4 +1,4 @@
-from hangman_spieler import eingabe_Spieler, wort_erzeugen, farbe, konfetti                      # Funktionen aus Teil 1 importieren
+from hangman_spieler import eingabe_Spieler, wort_erzeugen, farbe                      # Funktionen aus Teil 1 importieren
 from hangman_anzeige import hangman_zeichnen, wort_darstellen, trennlinie                        # Funktionen aus Teil 2 importieren
 
 
@@ -55,7 +55,6 @@ def spielrunde(spieler):
         print()                                                                                   # Leerzeile nach der Wortanzeige
 
         if gewonnen:                                                                              # Prüfen ob das Wort vollständig erraten wurde (Buchstabe für Buchstabe)
-            konfetti()                                                                            # Konfetti-Regen anzeigen
             print("\033[32m" + "-" * 45 + "\033[0m")                                              # Grüne Trennlinie oben
             print(f"\033[32mGEWONNEN! Das Team hat das Wort erraten!\033[0m")                     # Gewonnen-Nachricht in Grün
             print(f"\033[32mDas Wort war: {wort}\033[0m")                                         # Gelöstes Wort in Grün anzeigen
@@ -72,7 +71,6 @@ def spielrunde(spieler):
                 hangman_zeichnen(fehler)                                                          # Aktuellen Galgenstand nochmal zeigen
                 print()                                                                           # Leerzeile
                 wort_darstellen(wort, set(wort))                                                  # Vollständiges Wort anzeigen
-                konfetti()                                                                        # Konfetti-Regen anzeigen
                 print("\033[32m" + "-" * 45 + "\033[0m")                                          # Grüne Trennlinie oben
                 print(f"\033[32mGEWONNEN! {sp['name']} hat das Wort erraten!\033[0m")             # Gewonnen mit Spielername in Grün
                 print(f"\033[32mDas Wort war: {wort}\033[0m")                                     # Gelöstes Wort in Grün anzeigen

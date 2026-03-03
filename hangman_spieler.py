@@ -3,7 +3,6 @@
 # ============================================================
 
 import random                                                                                     # Wird benötigt um ein zufälliges Wort aus der Liste auszuwählen
-import time                                                                                       # Wird benötigt für die Pause zwischen den Konfetti-Zeilen
 #import os                                                                                        # Wird benötigt für Betriebssystem-Funktionen
 
 
@@ -26,30 +25,6 @@ def farbe(text, farbcode):
     return f"{farbcode}{text}{RESET}"
 
 
-def konfetti():
-    # Zeigt einen kurzen bunten Konfetti-Regen im Terminal an wenn gewonnen wurde
-    symbole = ["*", "+", "o", "#", "@", "%", "^", "&", "~", "="]                                  # Mögliche Konfetti-Symbole
-    farb_codes = [                                                                                # Alle verfügbaren ANSI-Farben für Konfetti
-        "\033[31m", "\033[32m", "\033[33m", "\033[34m",
-        "\033[35m", "\033[36m", "\033[91m", "\033[92m",
-        "\033[93m", "\033[94m", "\033[95m", "\033[96m",
-    ]
-    breite = 60                                                                                   # Anzahl der Zeichen pro Konfetti-Zeile
-    zeilen = 4                                                                                    # Anzahl der Konfetti-Zeilen die angezeigt werden
-
-    print()                                                                                       # Leerzeile vor dem Konfetti
-    for _ in range(zeilen):                                                                       # Schleife über alle Konfetti-Zeilen
-        zeile = ""                                                                                # Aktuelle Zeile als leeren String starten
-        for _ in range(breite):                                                                   # Schleife über jede Position in der Zeile
-            if random.random() < 0.25:                                                            # Mit 25% Wahrscheinlichkeit ein Symbol einfügen
-                symbol = random.choice(symbole)                                                   # Zufälliges Symbol aus der Liste wählen
-                farbe_code = random.choice(farb_codes)                                            # Zufällige Farbe aus der Liste wählen
-                zeile += f"{farbe_code}{symbol}\033[0m"                                           # Gefärbtes Symbol zur Zeile hinzufügen
-            else:
-                zeile += " "                                                                      # Sonst ein Leerzeichen einfügen (damit es locker aussieht)
-        print(zeile)                                                                              # Fertige Konfetti-Zeile ausgeben
-        time.sleep(0.05)                                                                          # Kurze Pause damit der Regen-Effekt sichtbar ist
-    print()                                                                                       # Leerzeile nach dem Konfetti
 
 
 # ─────────────────────────────────────────────
