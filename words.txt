@@ -19,6 +19,7 @@ Teller
 Messer
 Gabel
 Dusche
+Wienerle
 Zimmer
 Wecker
 Arbeit
@@ -29,7 +30,9 @@ Kühlschrank
 Schokolade
 Wohnung
 Haustür
+Gottlob
 Fahrrad
 Kleidung
 Getränke
 Legat
+Flasche
