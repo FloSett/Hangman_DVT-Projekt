@@ -2,7 +2,7 @@ from hangman_spieler import farbe, RESET                                        
 
 
 # ─────────────────────────────────────────────
-#  TEIL 2: Hangman-Darstellung & Wort-Darstellung
+#  TEIL 2: Hangman-Darstellung & Wort-Darstellung 2
 # ─────────────────────────────────────────────
 
 def hangman_zeichnen(fehler):
