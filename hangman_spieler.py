@@ -1,5 +1,5 @@
 # ============================================================
-#                      HANGMAN - Komplett
+#                      HANGMAN - Komplett 2
 # ============================================================
 
 import random                                                                                     # Wird benötigt um ein zufälliges Wort aus der Liste auszuwählen
